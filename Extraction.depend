@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1555999760 source:/home/waonemperor/Documents/Extraction/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1556002681 source:/home/waonemperor/Documents/Extraction/log.c
+	"log.h"
+	<stdarg.h>
+
+1556002308 /home/waonemperor/Documents/Extraction/log.h
+	<stdio.h>
+	<stdlib.h>
+
+1556002699 source:/home/waonemperor/Documents/Extraction/matrix.c
+	"matrix.h"
+	"log.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+
+1556001279 /home/waonemperor/Documents/Extraction/matrix.h
+	"typedef.h"
+
+1556000867 /home/waonemperor/Documents/Extraction/typedef.h
+	<stdlib.h>
+
+1556002691 source:/home/waonemperor/Documents/Extraction/typedef.c
+	"typedef.h"
+	"log.h"
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+
+1556005537 source:/home/waonemperor/Documents/Extraction/image.c
+	"image.h"
+	"log.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+
+1556005246 /home/waonemperor/Documents/Extraction/image.h
+	"matrix.h"
+
