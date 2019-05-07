@@ -5,6 +5,7 @@
 		<Option title="Extraction" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="core/;core/header/;core/source/;io/;io/header/;io/source/;object/;object/header/;object/source/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Extraction" prefix_auto="1" extension_auto="1" />
@@ -31,8 +32,43 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="image.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="io/source/" />
+		</Unit>
+		<Unit filename="image.h">
+			<Option virtualFolder="io/header/" />
+		</Unit>
+		<Unit filename="log.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="core/source/" />
+		</Unit>
+		<Unit filename="log.h">
+			<Option virtualFolder="core/header/" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="matrix.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="core/source/" />
+		</Unit>
+		<Unit filename="matrix.h">
+			<Option virtualFolder="core/header/" />
+		</Unit>
+		<Unit filename="minutiae.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="object/source/" />
+		</Unit>
+		<Unit filename="minutiae.h">
+			<Option virtualFolder="object/header/" />
+		</Unit>
+		<Unit filename="typedef.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="core/source/" />
+		</Unit>
+		<Unit filename="typedef.h">
+			<Option virtualFolder="core/header/" />
 		</Unit>
 		<Extensions>
 			<code_completion />

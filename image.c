@@ -41,6 +41,27 @@ Mat* IO_ReadPGM(const char* fileName)
   return mat;
 }
 
+Mat* IO_ReadRAW(const char* fileName, int cols, int rows, int maxval)
+{
+    const int bufSize = 100;
+    char buf[bufSize];
+
+    FILE* in = fopen(fileName, "r");
+    if (in == NULL) {
+        /* File does not exists? */
+        ABORT("Error in opening image file: %s\n", fileName);
+    }
+
+    /* Read image data. */
+    Mat* mat = Mat_Init(rows, cols, UCHAR);
+    int j;
+    for (j = 0; j < mat->rows; j++)
+        fread(mat->data.u[j], DataTypeSize(UCHAR), cols, in);
+
+    fclose(in);
+    return mat;
+}
+
 Mat* IO_ReadPPM(const char* fileName)
 {
   const int bufSize = 100;

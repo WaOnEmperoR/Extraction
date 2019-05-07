@@ -35,11 +35,23 @@ typedef enum
     UCHAR, INT, FLOAT, DOUBLE, COLOR_PIXEL
 } DataType;
 
+typedef enum
+{
+    BIFURCATION, RIDGE_ENDING, OTHER
+}MinutiaeType;
+
 /**
  * Get the size of the given data type.
  * @param The data type code.
  * @return The size of the corresponding data type.
  */
 size_t DataTypeSize(DataType t);
+
+/**
+ * Get the size of the given minutiae type.
+ * @param The minutiae type code.
+ * @return The size of the corresponding minutiae type.
+ */
+size_t MinutiaeTypeSize(MinutiaeType t);
 
 #endif // TYPEDEF_H_INCLUDED

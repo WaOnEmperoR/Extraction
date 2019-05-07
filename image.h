@@ -14,6 +14,14 @@ Mat* IO_ReadPGM(const char* fileName);
 /**
  * Read an image from a PPM image file.
  * The client code will be responsible for calling @c Mat_Release.
+ * @param fileName The name of the RAW image file.
+ * @return Image matrix of type COLOR_PIXEL.
+ */
+Mat* IO_ReadRAW(const char* fileName, int cols, int rows, int maxval);
+
+/**
+ * Read an image from a PPM image file.
+ * The client code will be responsible for calling @c Mat_Release.
  * @param fileName The name of the PPM image file.
  * @return Image matrix of type COLOR_PIXEL.
  */

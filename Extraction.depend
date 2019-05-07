@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1555999760 source:/home/waonemperor/Documents/Extraction/main.c
+1557212270 source:/home/waonemperor/Documents/Extraction/main.c
 	<stdio.h>
 	<stdlib.h>
+	"image.h"
 
 1556002681 source:/home/waonemperor/Documents/Extraction/log.c
 	"log.h"
@@ -22,7 +23,7 @@
 1556001279 /home/waonemperor/Documents/Extraction/matrix.h
 	"typedef.h"
 
-1556000867 /home/waonemperor/Documents/Extraction/typedef.h
+1557201097 /home/waonemperor/Documents/Extraction/typedef.h
 	<stdlib.h>
 
 1556002691 source:/home/waonemperor/Documents/Extraction/typedef.c
@@ -32,7 +33,7 @@
 	<string.h>
 	<assert.h>
 
-1556005537 source:/home/waonemperor/Documents/Extraction/image.c
+1557191458 source:/home/waonemperor/Documents/Extraction/image.c
 	"image.h"
 	"log.h"
 	<stdlib.h>
@@ -40,6 +41,22 @@
 	<string.h>
 	<assert.h>
 
-1556005246 /home/waonemperor/Documents/Extraction/image.h
+1557191474 /home/waonemperor/Documents/Extraction/image.h
 	"matrix.h"
+
+1557212164 source:/home/waonemperor/Documents/Extraction/minutiae.c
+	"minutia.h"
+	"minutiae.h"
+	"log.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+
+1557212276 /home/waonemperor/Documents/Extraction/minutia.h
+	"typedef.h"
+	"minutiae.h"
+
+1557212243 /home/waonemperor/Documents/Extraction/minutiae.h
+	"typedef.h"
 
