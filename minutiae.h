@@ -28,5 +28,4 @@ struct Minutiae {
 
 #endif // MINUTIAE_H_INCLUDED
 
-int32_t swap_int32( int32_t val );
-int16_t swap_int16( int16_t val );
+

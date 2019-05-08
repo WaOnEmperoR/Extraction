@@ -56,6 +56,13 @@
 		<Unit filename="matrix.h">
 			<Option virtualFolder="core/header/" />
 		</Unit>
+		<Unit filename="minutia.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="object/source/" />
+		</Unit>
+		<Unit filename="minutia.h">
+			<Option virtualFolder="object/header/" />
+		</Unit>
 		<Unit filename="minutiae.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="object/source/" />

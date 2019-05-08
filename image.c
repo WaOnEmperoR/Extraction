@@ -97,6 +97,11 @@ Mat* IO_ReadPPM(const char* fileName)
   return mat;
 }
 
+void IO_DebugPGM(Mat* mat)
+{
+    printf("%d %d\n", mat->cols, mat->rows);
+}
+
 void IO_WritePGM(const char* fileName, Mat* mat)
 {
   assert(mat->type == UCHAR || mat->type == FLOAT);
@@ -160,4 +165,9 @@ void WritePGM(const char* fileName, Mat* mat)
 void WritePPM(const char* fileName, Mat* mat)
 {
   IO_WritePPM(fileName, mat);
+}
+
+void DebugPGM(Mat* mat)
+{
+    IO_DebugPGM(mat);
 }
