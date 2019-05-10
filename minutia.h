@@ -26,6 +26,10 @@ void IO_Minutia_Read(Minutia* minutia);
 
 void Minutia_Read(Minutia* minutia);
 
+void IO_Minutia_Write(char* fileName, Minutia* minutia);
+
+void Minutia_Write(char* fileName, Minutia* minutia);
+
 int32_t swap_int32( int32_t val );
 int16_t swap_int16( int16_t val );
 

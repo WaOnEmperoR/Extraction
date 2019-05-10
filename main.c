@@ -154,10 +154,11 @@ int main()
 
     printf("==========\n");
 
-    printf("%d\n", minutia->fingerprintNum);
-    Minutia_Read(minutia);
+//    Minutia_Read(minutia);
+
+    Minutia_Write("adminduk/154-extra.iso", minutia);
 
 //    ReadTemplate("adminduk/154.iso");
-    printf("Hello world!\n");
+//    printf("Hello world!\n");
     return 0;
 }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1557285104 source:/home/waonemperor/Documents/Extraction/main.c
+1557371712 source:/home/waonemperor/Documents/Extraction/main.c
 	<stdio.h>
 	<stdlib.h>
 	"image.h"
@@ -55,17 +55,18 @@
 	<stdio.h>
 	<assert.h>
 
-1557284653 /home/waonemperor/Documents/Extraction/minutia.h
+1557371231 /home/waonemperor/Documents/Extraction/minutia.h
 	"typedef.h"
 	"minutiae.h"
 
 1557282022 /home/waonemperor/Documents/Extraction/minutiae.h
 	"typedef.h"
 
-1557285951 source:/home/waonemperor/Documents/Extraction/minutia.c
+1557459888 source:/home/waonemperor/Documents/Extraction/minutia.c
 	"minutia.h"
 	"minutiae.h"
 	"log.h"
+	"typedef.h"
 	<stdlib.h>
 	<string.h>
 	<stdio.h>

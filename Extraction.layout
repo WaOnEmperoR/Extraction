@@ -2,59 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="minutia.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2664" topLine="93" />
+		</Cursor>
+	</File>
 	<File name="typedef.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="273" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="log.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="minutia.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="430" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="minutiae.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="99" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="typedef.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="869" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="minutia.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3334" topLine="114" />
-		</Cursor>
-	</File>
-	<File name="matrix.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1008" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="image.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="694" topLine="52" />
-		</Cursor>
-	</File>
-	<File name="image.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4073" topLine="155" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4447" topLine="144" />
-		</Cursor>
-	</File>
-	<File name="matrix.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3411" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="log.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -62,9 +17,54 @@
 			<Cursor1 position="395" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="minutiae.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="593" topLine="13" />
+			<Cursor1 position="833" topLine="110" />
+		</Cursor>
+	</File>
+	<File name="minutiae.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="701" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="matrix.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3411" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="image.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="694" topLine="43" />
+		</Cursor>
+	</File>
+	<File name="typedef.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="544" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="minutia.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="523" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="log.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="matrix.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="269" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="minutiae.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="138" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="image.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4073" topLine="139" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
