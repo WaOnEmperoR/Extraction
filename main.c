@@ -142,7 +142,7 @@ int main()
 //    }
 //    fclose(fpo);
 
-    Mat* fp_original = IO_ReadRAW("adminduk/002-ex.RAW", 320, 480, 255);
+//    Mat* fp_original = IO_ReadRAW("adminduk/002-ex.RAW", 320, 480, 255);
 
 //    DebugPGM(fp_original);
 
@@ -154,7 +154,9 @@ int main()
 
     printf("==========\n");
 
-//    Minutia_Read(minutia);
+    Minutia_Read(minutia);
+
+//    free(minutia);
 
     Minutia_Write("adminduk/154-extra.iso", minutia);
 

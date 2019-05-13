@@ -39,7 +39,6 @@ Minutia* Minutia_Init(char* fileName)
     fread(FMR, 1, 8, fin);
 
     fread(buffer, 4, 1, fin);
-    printf("%d\n", buffer[0]);
     minutia->total_length = (int) swap_int32(buffer[0]);
 
     fread(buffer, 2, 1, fin);// rubbish
@@ -79,25 +78,37 @@ Minutia* Minutia_Init(char* fileName)
         xPacked = swap_int16(buffer[0]);
         minutia->minutiae_list[j].x = (int) (xPacked & 0x3FFF);
 
-//        printf("%d %d\n", (j+1), minutia->minutiae_list[j].x );
-
-        type_par = xPacked & 0xC000;
+        type_par = xPacked & (short) 0xC000;
         //printf("Minutia Type : %d\n", type_par);
         //printf("%d %d\n", (type_par >> 14) & 1, (type_par >> 15) & 1);
-        bit14 = (type_par >> 14) & 1;
-        bit15 = (type_par >> 15) & 1;
-        if (bit14 == 1)
+        switch (type_par)
         {
-            minutia->minutiae_list[j].type = BIFURCATION;
+            case 0x4000 :
+                minutia->minutiae_list[j].type=RIDGE_ENDING;
+                break;
+            case 0x8000 :
+                minutia->minutiae_list[j].type=BIFURCATION;
+                break;
+            case 0 :
+                minutia->minutiae_list[j].type=OTHER;
+                break;
+            default :
+                break;
         }
-        else if (bit15==1)
-        {
-            minutia->minutiae_list[j].type = RIDGE_ENDING;
-        }
-        else
-        {
-            minutia->minutiae_list[j].type = OTHER;
-        }
+//        bit14 = (type_par >> 14) & 1;
+//        bit15 = (type_par >> 15) & 1;
+//        if (bit14 == 1)
+//        {
+//            minutia->minutiae_list[j].type = BIFURCATION;
+//        }
+//        else if (bit15==1)
+//        {
+//            minutia->minutiae_list[j].type = RIDGE_ENDING;
+//        }
+//        else
+//        {
+//            minutia->minutiae_list[j].type = OTHER;
+//        }
 
         fread(buffer, 2, 1, fin);
         temp = swap_int16(buffer[0]);
@@ -120,7 +131,6 @@ void IO_Minutia_Write(char* fileName, Minutia* minutia)
 {
     FILE *fp;
     char str_header[] = "FMR\0 20";
-    printf("%s\n", str_header);
 
     fp = fopen(fileName, "w");
     fwrite(str_header, 1, sizeof(str_header), fp);
@@ -128,7 +138,7 @@ void IO_Minutia_Write(char* fileName, Minutia* minutia)
     int* tot_len = swap_int32(minutia->total_length);
     fwrite(&tot_len, 1, 4, fp);
 
-    char rubbish[] = "0";
+    char rubbish[] = "\0";
 
     //2B rubbish
     fwrite(rubbish, 2, sizeof(char), fp);
@@ -178,7 +188,7 @@ void IO_Minutia_Write(char* fileName, Minutia* minutia)
             default :
                 break;
         }
-        short* x_pos_ready = swap_int16((short) x_pos_masked | type);
+        short* x_pos_ready = swap_int16((short) (x_pos_masked | type));
         fwrite(&x_pos_ready, 1, sizeof(short), fp);
 
         int y_pos_masked = minutia->imgSizeY - minutia->minutiae_list[i].y - 1;
@@ -194,33 +204,40 @@ void IO_Minutia_Write(char* fileName, Minutia* minutia)
         fwrite(&quality, 1, 1, fp);
     }
 
-    short* rub = 0;
-    // 2B extra data
-    write(&rub, 1, 1, fp);
-    write(&rub, 1, 1, fp);
+    fwrite(rubbish, 1, sizeof(char), fp);
+    fwrite(rubbish, 1, sizeof(char), fp);
 
     fclose(fp);
 }
 
+void Minutia_Release(Minutia* minutia)
+{
+    assert(minutia != NULL);
+    int i;
+
+    free(minutia->minutiae_list);
+    free(minutia);
+}
+
 void IO_Minutia_Read(Minutia* minutia)
 {
-    printf("%d\n", minutia->total_length);
-    printf("%d\n", minutia->imgSizeX);
-    printf("%d\n", minutia->imgSizeY);
-    printf("%d\n", minutia->pixelCmX);
-    printf("%d\n", minutia->pixelCmY);
-    printf("%d\n", minutia->fingerprintNum);
-    printf("%d\n", minutia->fingerprintQuality);
-    printf("%d\n", minutia->minutiaeNum);
+    printf("%-25s %10d\n", "Minutia Length", minutia->total_length);
+    printf("%-25s %10d\n", "Image Size X", minutia->imgSizeX);
+    printf("%-25s %10d\n", "Image Size Y", minutia->imgSizeY);
+    printf("%-25s %10d\n", "Pixel x size (cm)", minutia->pixelCmX);
+    printf("%-25s %10d\n", "Pixel y size (cm)", minutia->pixelCmY);
+    printf("%-25s %10d\n", "Number of Fingerprint", minutia->fingerprintNum);
+    printf("%-25s %10d\n", "Fingerprint Quality", minutia->fingerprintQuality);
+    printf("%-25s %10d\n", "Number of Minutiae", minutia->minutiaeNum);
     for (int i=0; i<minutia->minutiaeNum; i++)
     {
         printf("----------------\n");
-        printf("%d\n", i);
-        printf("%d\n", minutia->minutiae_list[i].x);
-        printf("%d\n", minutia->minutiae_list[i].y);
-        printf("%d\n", minutia->minutiae_list[i].type);
-        printf("%f\n", minutia->minutiae_list[i].direction);
-        printf("%d\n", minutia->minutiae_list[i].quality);
+        printf("%-25s %10d\n", "Minutiae Number", i);
+        printf("%-25s %10d\n", "Minutiae X Position", minutia->minutiae_list[i].x);
+        printf("%-25s %10d\n", "Minutiae Y Position", minutia->minutiae_list[i].y);
+        printf("%-25s %10d\n", "Minutiae Type", minutia->minutiae_list[i].type);
+        printf("%-25s %10f\n", "Minutiae Direction", minutia->minutiae_list[i].direction);
+        printf("%-25s %10d\n", "Minutiae Quality", minutia->minutiae_list[i].quality);
     }
     printf("---------------\n");
 }
