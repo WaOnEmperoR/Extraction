@@ -72,3 +72,66 @@
 	<stdio.h>
 	<assert.h>
 
+1557796291 source:c:\users\rachmawan\documents\github\extraction\image.c
+	"image.h"
+	"log.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+
+1557796291 c:\users\rachmawan\documents\github\extraction\image.h
+	"matrix.h"
+
+1557796291 c:\users\rachmawan\documents\github\extraction\matrix.h
+	"typedef.h"
+
+1557796291 c:\users\rachmawan\documents\github\extraction\typedef.h
+	<stdlib.h>
+
+1557796291 c:\users\rachmawan\documents\github\extraction\log.h
+	<stdio.h>
+	<stdlib.h>
+
+1557796291 source:c:\users\rachmawan\documents\github\extraction\log.c
+	"log.h"
+	<stdarg.h>
+
+1557796291 source:c:\users\rachmawan\documents\github\extraction\main.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"minutia.h"
+	"minutiae.h"
+
+1557796559 c:\users\rachmawan\documents\github\extraction\minutia.h
+	"typedef.h"
+	"minutiae.h"
+
+1557796291 c:\users\rachmawan\documents\github\extraction\minutiae.h
+	"typedef.h"
+
+1557796291 source:c:\users\rachmawan\documents\github\extraction\matrix.c
+	"matrix.h"
+	"log.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+
+1557796291 source:c:\users\rachmawan\documents\github\extraction\minutiae.c
+	"minutia.h"
+	"minutiae.h"
+	"log.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<assert.h>
+
+1557796291 source:c:\users\rachmawan\documents\github\extraction\typedef.c
+	"typedef.h"
+	"log.h"
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+

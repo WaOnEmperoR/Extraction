@@ -242,6 +242,11 @@ void IO_Minutia_Read(Minutia* minutia)
     printf("---------------\n");
 }
 
+int count_total_length(Minutia* minutia)
+{
+    return 30 + (minutia->minutiaeNum * 4);
+}
+
 void Minutia_Read(Minutia* minutia)
 {
     IO_Minutia_Read(minutia);
